@@ -1,5 +1,11 @@
+import { lazy, Suspense } from "react";
+const Keyboard = lazy(() => import("./components/Keyboard"));
 const App = () => {
-  return <div className="text-red-500">App</div>;
+  return (
+    <Suspense fallback="Loading...">
+      <Keyboard />
+    </Suspense>
+  );
 };
 
 export default App;
