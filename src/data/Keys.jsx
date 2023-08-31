@@ -64,4 +64,61 @@ export const keys = [
     label: "delete",
     keyCode: "delete",
   },
+  //   second row btns
+  {
+    label: "`",
+    keyCode: "`",
+  },
+  {
+    label: "1",
+    keyCode: "1",
+  },
+  {
+    label: "2",
+    keyCode: "2",
+  },
+  {
+    label: "3",
+    keyCode: "3",
+  },
+  {
+    label: "4",
+    keyCode: "4",
+  },
+  {
+    label: "5",
+    keyCode: "5",
+  },
+  {
+    label: "6",
+    keyCode: "6",
+  },
+  {
+    label: "7",
+    keyCode: "7",
+  },
+  {
+    label: "8",
+    keyCode: "8",
+  },
+  {
+    label: "9",
+    keyCode: "9",
+  },
+  {
+    label: "0",
+    keyCode: "0",
+  },
+  {
+    label: "-",
+    keyCode: "-",
+  },
+  {
+    label: "=",
+    keyCode: "=",
+  },
+  {
+    label: "backspace",
+    keyCode: "backspace",
+  },
 ];
