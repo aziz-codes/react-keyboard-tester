@@ -1,6 +1,10 @@
 import { TvIcon, PhoneIcon } from "@heroicons/react/24/outline";
 export const keys = [
   {
+    label: "esc",
+    keyCode: "esc",
+  },
+  {
     label: "f1",
     keyCode: "f1",
   },
