@@ -121,4 +121,61 @@ export const keys = [
     label: "backspace",
     keyCode: "backspace",
   },
+  // third row
+  {
+    label: "tab",
+    keyCode: "tab",
+  },
+  {
+    label: "q",
+    keyCode: "q",
+  },
+  {
+    label: "w",
+    keyCode: "w",
+  },
+  {
+    label: "e",
+    keyCode: "e",
+  },
+  {
+    label: "r",
+    keyCode: "r",
+  },
+  {
+    label: "t",
+    keyCode: "t",
+  },
+  {
+    label: "y",
+    keyCode: "y",
+  },
+  {
+    label: "u",
+    keyCode: "u",
+  },
+  {
+    label: "i",
+    keyCode: "i",
+  },
+  {
+    label: "o",
+    keyCode: "o",
+  },
+  {
+    label: "p",
+    keyCode: "p",
+  },
+  {
+    label: "[",
+    keyCode: "[",
+  },
+  {
+    label: "]",
+    keyCode: "]",
+  },
+  {
+    label: "\\",
+    keyCode: "\\",
+  },
 ];
