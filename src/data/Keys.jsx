@@ -178,4 +178,57 @@ export const keys = [
     label: "\\",
     keyCode: "\\",
   },
+  // 4th rows..
+  {
+    label: "caps lock",
+    keyCode: "capslock",
+  },
+  {
+    label: "a",
+    keyCode: "a",
+  },
+  {
+    label: "s",
+    keyCode: "s",
+  },
+  {
+    label: "d",
+    keyCode: "d",
+  },
+  {
+    label: "f",
+    keyCode: "f",
+  },
+  {
+    label: "g",
+    keyCode: "g",
+  },
+  {
+    label: "h",
+    keyCode: "h",
+  },
+  {
+    label: "j",
+    keyCode: "j",
+  },
+  {
+    label: "k",
+    keyCode: "k",
+  },
+  {
+    label: "l",
+    keyCode: "l",
+  },
+  {
+    label: ";",
+    keyCode: ";",
+  },
+  {
+    label: "'",
+    keyCode: "'",
+  },
+  {
+    label: "enter",
+    keyCode: "enter",
+  },
 ];
