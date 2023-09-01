@@ -13,6 +13,7 @@ const Keyboard = () => {
   const firstRow = allKeys.slice(0, 16);
   const secondRow = allKeys.slice(16, 30);
   const thirdRow = allKeys.slice(30, 44);
+  const fourthRow = allKeys.slice(44, 57);
   return (
     <section className="w-full  flex flex-col items-center mt-24">
       <div className="flex items-center gap-1">
@@ -65,6 +66,24 @@ const Keyboard = () => {
           ))}
         </div>
         {/* end of third row */}
+
+        {/* start of 4th row */}
+
+        <div className="flex gap-2 items-center">
+          {fourthRow.map((btn, index) => (
+            <button
+              key={index}
+              className={`h-10 w-11 border ${
+                index === 0 &&
+                "w-20 flex rounded-sm items-center justify-center shadow-lg "
+              } ${index === fourthRow.length - 1 && "w-24"}`}
+            >
+              {btn.label}
+            </button>
+          ))}
+        </div>
+
+        {/* end of 4th row  */}
       </div>
     </section>
   );
