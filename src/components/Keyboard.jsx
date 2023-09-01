@@ -19,7 +19,7 @@ const Keyboard = () => {
     const activeKeyhandler = (event) => {
       console.log(event.key);
       const index = allKeys.findIndex((key) => key.keyCode === event.key);
-      if (index !== -1) {
+      if (index) {
         const updatedKeys = [...allKeys];
         updatedKeys[index].isPressed = true;
         setAllKeys(updatedKeys);
