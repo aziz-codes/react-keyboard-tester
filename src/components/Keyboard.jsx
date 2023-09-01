@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { keys } from "../data/Keys";
 
 const Keyboard = () => {
@@ -9,11 +9,30 @@ const Keyboard = () => {
       isPressed: false,
     }))
   );
-  console.log(allKeys);
+  // console.log(allKeys);
   const firstRow = allKeys.slice(0, 16);
   const secondRow = allKeys.slice(16, 30);
   const thirdRow = allKeys.slice(30, 44);
   const fourthRow = allKeys.slice(44, 57);
+
+  useEffect(() => {
+    const activeKeyhandler = (event) => {
+      console.log(event.key);
+      const index = allKeys.findIndex((key) => key.keyCode === event.key);
+      if (index !== -1) {
+        const updatedKeys = [...allKeys];
+        updatedKeys[index].isPressed = true;
+        setAllKeys(updatedKeys);
+        alert("key updated at index", index);
+      } else {
+        alert("key not found");
+      }
+    };
+    window.addEventListener("keypress", activeKeyhandler);
+
+    return () => window.removeEventListener("keypress", activeKeyhandler);
+  }, []);
+  // console.log(allKeys);
   return (
     <section className="w-full  flex flex-col items-center mt-24">
       <div className="flex items-center gap-1">
