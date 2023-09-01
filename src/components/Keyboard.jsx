@@ -25,7 +25,7 @@ const Keyboard = () => {
         <div className="flex gap-2 items-center">
           {firstRow.map((btn, index) => (
             <button
-              className={`h-6 w-10 border rounded-sm shadow-md text-xs text-center flex justify-center items-center`}
+              className={`h-6 w-10 border rounded-sm shadow-lg text-xs text-center flex justify-center items-center`}
               key={index}
             >
               {btn.label}
@@ -40,7 +40,7 @@ const Keyboard = () => {
               key={index}
               className={`${
                 index === 0 && "h-10 w-8  rounded-sm"
-              } h-10 w-11 border rounded-sm flex items-center justify-center ${
+              } h-10 w-11 border rounded-sm flex items-center justify-center shadow-lg ${
                 index === secondRow.length - 1 && "w-[96px] px-5"
               }`}
             >
@@ -56,7 +56,7 @@ const Keyboard = () => {
               key={index}
               className={`${
                 index === 0 && "h-10 w-[75px]"
-              } h-10 w-11 border rounded-sm flex items-center justify-center ${
+              } h-10 w-11 border rounded-sm flex items-center justify-center shadow-lg ${
                 index === thirdRow.length - 1 && "w-[50px]"
               }`}
             >
