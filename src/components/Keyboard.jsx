@@ -9,11 +9,12 @@ const Keyboard = () => {
       isPressed: false,
     }))
   );
-  // console.log(allKeys);
+  console.log(allKeys);
   const firstRow = allKeys.slice(0, 16);
   const secondRow = allKeys.slice(16, 30);
   const thirdRow = allKeys.slice(30, 44);
   const fourthRow = allKeys.slice(44, 57);
+  const fifthRow = allKeys.slice(57, 69);
 
   useEffect(() => {
     const activeKeyhandler = (event) => {
@@ -103,9 +104,24 @@ const Keyboard = () => {
         </div>
 
         {/* end of 4th row  */}
+        {/* start of fifth row */}
+
+        <div className="flex gap-2 items-center">
+          {fifthRow.map((btn, index) => (
+            <button
+              className={`h-10 border shadow-lg rounded-sm w-11 ${
+                (index === fifthRow.length - 1 && "w-28") ||
+                (index === 0 && "w-28")
+              }`}
+              key={index}
+            >
+              {btn.label}
+            </button>
+          ))}
+        </div>
+        {/* end of fifth row */}
       </div>
     </section>
   );
 };
-
 export default Keyboard;
