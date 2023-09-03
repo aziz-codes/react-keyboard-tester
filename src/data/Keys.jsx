@@ -290,4 +290,41 @@ export const keys = [
     label: "shift",
     keyCode: "shift",
   },
+  // last row keys...
+  {
+    label: "ctrl",
+    keyCode: "Control",
+  },
+  {
+    label: "fn",
+    keyCode: "fn",
+  },
+  {
+    label: "win",
+    keyCode: "win",
+  },
+  {
+    label: " ",
+    keyCode: "space",
+  },
+  {
+    label: "alt",
+    keyCode: "alt",
+  },
+  {
+    label: "ctrl",
+    keyCode: "Control",
+  },
+  {
+    label: "ctrl",
+    keyCode: "Control",
+  },
+  {
+    label: "ctrl",
+    keyCode: "Control",
+  },
+  {
+    label: "ctrl",
+    keyCode: "Control",
+  },
 ];
