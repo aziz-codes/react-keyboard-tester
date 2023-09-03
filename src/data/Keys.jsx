@@ -231,4 +231,63 @@ export const keys = [
     label: "enter",
     keyCode: "enter",
   },
+  // fifth row...
+  {
+    label: "shift",
+    keyCode: "shift",
+  },
+
+  {
+    label: "z",
+    keyCode: "z",
+  },
+
+  {
+    label: "x",
+    keyCode: "x",
+  },
+
+  {
+    label: "c",
+    keyCode: "c",
+  },
+
+  {
+    label: "v",
+    keyCode: "v",
+  },
+
+  {
+    label: "b",
+    keyCode: "b",
+  },
+
+  {
+    label: "n",
+    keyCode: "n",
+  },
+
+  {
+    label: "m",
+    keyCode: "m",
+  },
+
+  {
+    label: ",",
+    keyCode: ",",
+  },
+
+  {
+    label: ".",
+    keyCode: ".",
+  },
+
+  {
+    label: "/",
+    keyCode: "/",
+  },
+  {
+    label: "shift",
+    keyCode: "shift",
+  },
 ];
