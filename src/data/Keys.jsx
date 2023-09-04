@@ -187,7 +187,7 @@ export const keys = [
   },
   // 4th rows..
   {
-    label: "caps lock",
+    label: "capslock",
     keyCode: "capslock",
   },
   {
