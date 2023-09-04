@@ -9,7 +9,7 @@ import {
 export const keys = [
   {
     label: "esc",
-    keyCode: "esc",
+    keyCode: "escape",
   },
   {
     label: "f1",
