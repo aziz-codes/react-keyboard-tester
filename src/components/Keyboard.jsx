@@ -15,24 +15,27 @@ const Keyboard = () => {
   const thirdRow = allKeys.slice(30, 44);
   const fourthRow = allKeys.slice(44, 57);
   const fifthRow = allKeys.slice(57, 69);
-
+  const lastRow = allKeys.slice(69, 75);
+  const navigationKeys = allKeys.slice(75, 79);
   useEffect(() => {
     const activeKeyhandler = (event) => {
+      event.preventDefault();
       console.log(event.key);
-      const index = allKeys.findIndex((key) => key.keyCode === event.key);
-      if (index) {
-        const updatedKeys = [...allKeys];
-        updatedKeys[index].isPressed = true;
-        setAllKeys(updatedKeys);
-        alert("key updated at index", index);
-      } else {
-        alert("key not found");
-      }
+      // const index = allKeys.findIndex((key) => key.keyCode === event.key);
+      // if (index) {
+      //   const updatedKeys = [...allKeys];
+      //   updatedKeys[index].isPressed = true;
+      //   setAllKeys(updatedKeys);
+      //   alert("key updated at index", index);
+      // } else {
+      //   alert("key not found");
+      // }
     };
-    window.addEventListener("keypress", activeKeyhandler);
+    window.addEventListener("keyup", activeKeyhandler);
 
-    return () => window.removeEventListener("keypress", activeKeyhandler);
+    return () => window.removeEventListener("keyup", activeKeyhandler);
   }, []);
+
   // console.log(allKeys);
   return (
     <section className="w-full  flex flex-col items-center mt-24">
@@ -93,9 +96,9 @@ const Keyboard = () => {
           {fourthRow.map((btn, index) => (
             <button
               key={index}
-              className={`h-10 w-11 border ${
+              className={`h-10 w-11 border shadow-lg ${
                 index === 0 &&
-                "w-20 flex rounded-sm items-center justify-center shadow-lg "
+                "w-20 flex rounded-sm items-center justify-center "
               } ${index === fourthRow.length - 1 && "w-24"}`}
             >
               {btn.label}
@@ -120,8 +123,54 @@ const Keyboard = () => {
           ))}
         </div>
         {/* end of fifth row */}
+
+        {/* start of last row */}
+        <div className="flex gap-2 items-center">
+          {lastRow.map((btn, index) => (
+            <button
+              key={index}
+              className={`h-10 w-11 rounded-sm flex justify-center shadow-lg items-center border ${
+                index === 4 && "w-[283px]"
+              }`}
+            >
+              {btn.label}
+            </button>
+          ))}
+
+          {/* navigation keys.. */}
+          <div className="grid grid-cols-4">
+            {navigationKeys.map((btn, i) =>
+              i === 1 || i === 2 ? (
+                <button
+                  className="h-4 w-12 shadow-lg border rounded-sm flex justify-center items-center"
+                  key={i}
+                >
+                  {btn.label}
+                </button>
+              ) : (
+                <button
+                  className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
+                  key={i}
+                >
+                  {btn.label}
+                </button>
+              )
+            )}
+          </div>
+          {/* end of navigation keys */}
+        </div>
+        {/* end of last row */}
       </div>
     </section>
   );
 };
 export default Keyboard;
+
+// <button
+//               className={`shadow-lg rounded-sm flex justify-center items-center ${
+//                 i === 1 || i === 2 ? "w-12 h-4" : "w-10 h-11"
+//               }`}
+//               key={i}
+//             >
+//               {btn.label}
+//             </button>
