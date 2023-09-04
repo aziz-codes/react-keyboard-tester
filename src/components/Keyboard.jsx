@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { keys } from "../data/Keys";
 
 const Keyboard = () => {
+  // add 'isPressed' property to all keys
   const [allKeys, setAllKeys] = useState(
     keys.map((key) => ({
       label: key.label,
@@ -17,26 +18,34 @@ const Keyboard = () => {
   const fifthRow = allKeys.slice(57, 69);
   const lastRow = allKeys.slice(69, 75);
   const navigationKeys = allKeys.slice(75, 79);
+
+  // using useEffect hook to listen for keyup event.
   useEffect(() => {
     const activeKeyhandler = (event) => {
+      // prevent default functionality
       event.preventDefault();
-      console.log(event.key);
-      // const index = allKeys.findIndex((key) => key.keyCode === event.key);
-      // if (index) {
-      //   const updatedKeys = [...allKeys];
-      //   updatedKeys[index].isPressed = true;
-      //   setAllKeys(updatedKeys);
-      //   alert("key updated at index", index);
-      // } else {
-      //   alert("key not found");
-      // }
+      console.log(event.key.toLowerCase());
+      const index = allKeys.findIndex(
+        (key) => key.keyCode.toLowerCase() === event.key.toLowerCase()
+      );
+      if (index) {
+        // updating 'isPressed' prop of a key that matches
+        const updatedKeys = [...allKeys];
+        updatedKeys[index].isPressed = true;
+        setAllKeys(updatedKeys);
+      } else {
+        console.log("key not found");
+      }
     };
     window.addEventListener("keyup", activeKeyhandler);
-
+    // cleanup function.
     return () => window.removeEventListener("keyup", activeKeyhandler);
   }, []);
 
-  // console.log(allKeys);
+  //  background-color for active and non active buttons.
+  const activeBtn = "bg-red-500";
+  const nonActiveBtn = "bg-white";
+
   return (
     <section className="w-full  flex flex-col items-center mt-24">
       <div className="flex items-center gap-1">
@@ -49,7 +58,9 @@ const Keyboard = () => {
         <div className="flex gap-2 items-center">
           {firstRow.map((btn, index) => (
             <button
-              className={`h-6 w-10 border rounded-sm shadow-lg text-xs text-center flex justify-center items-center`}
+              className={`h-6 w-10 border rounded-sm shadow-lg text-xs text-center flex justify-center items-center ${
+                btn.isPressed ? activeBtn : nonActiveBtn
+              }`}
               key={index}
             >
               {btn.label}
@@ -62,7 +73,9 @@ const Keyboard = () => {
           {secondRow.map((btn, index) => (
             <button
               key={index}
-              className={`${
+              className={`${btn.isPressed ? activeBtn : nonActiveBtn} ${
+                btn.isPressed ? activeBtn : nonActiveBtn
+              } ${
                 index === 0 && "h-10 w-8  rounded-sm"
               } h-10 w-11 border rounded-sm flex items-center justify-center shadow-lg ${
                 index === secondRow.length - 1 && "w-[96px] px-5"
@@ -78,7 +91,7 @@ const Keyboard = () => {
           {thirdRow.map((btn, index) => (
             <button
               key={index}
-              className={`${
+              className={`${btn.isPressed ? activeBtn : nonActiveBtn} ${
                 index === 0 && "h-10 w-[75px]"
               } h-10 w-11 border rounded-sm flex items-center justify-center shadow-lg ${
                 index === thirdRow.length - 1 && "w-[50px]"
@@ -96,7 +109,9 @@ const Keyboard = () => {
           {fourthRow.map((btn, index) => (
             <button
               key={index}
-              className={`h-10 w-11 border shadow-lg ${
+              className={`${
+                btn.isPressed ? activeBtn : nonActiveBtn
+              } h-10 w-11 border shadow-lg ${
                 index === 0 &&
                 "w-20 flex rounded-sm items-center justify-center "
               } ${index === fourthRow.length - 1 && "w-24"}`}
@@ -112,7 +127,9 @@ const Keyboard = () => {
         <div className="flex gap-2 items-center">
           {fifthRow.map((btn, index) => (
             <button
-              className={`h-10 border shadow-lg rounded-sm w-11 ${
+              className={`${
+                btn.isPressed ? activeBtn : nonActiveBtn
+              } h-10 border shadow-lg rounded-sm w-11 ${
                 (index === fifthRow.length - 1 && "w-28") ||
                 (index === 0 && "w-28")
               }`}
@@ -129,7 +146,9 @@ const Keyboard = () => {
           {lastRow.map((btn, index) => (
             <button
               key={index}
-              className={`h-10 w-11 rounded-sm flex justify-center shadow-lg items-center border ${
+              className={`${
+                btn.isPressed ? activeBtn : nonActiveBtn
+              } h-10 w-11 rounded-sm flex justify-center shadow-lg items-center border ${
                 index === 4 && "w-[283px]"
               }`}
             >
@@ -165,12 +184,3 @@ const Keyboard = () => {
   );
 };
 export default Keyboard;
-
-// <button
-//               className={`shadow-lg rounded-sm flex justify-center items-center ${
-//                 i === 1 || i === 2 ? "w-12 h-4" : "w-10 h-11"
-//               }`}
-//               key={i}
-//             >
-//               {btn.label}
-//             </button>
