@@ -1,4 +1,11 @@
-import { TvIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import {
+  TvIcon,
+  PhoneIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronUpIcon,
+  ChevronDownIcon,
+} from "@heroicons/react/24/outline";
 export const keys = [
   {
     label: "esc",
@@ -304,27 +311,33 @@ export const keys = [
     keyCode: "win",
   },
   {
-    label: " ",
+    label: "alt",
+    keyCode: "alt",
+  },
+  {
+    label: "space",
     keyCode: "space",
   },
   {
     label: "alt",
     keyCode: "alt",
   },
+
+  // navigation keys...
   {
-    label: "ctrl",
-    keyCode: "Control",
+    label: <ChevronLeftIcon className="h-4 w-4" />,
+    keyCode: "left",
   },
   {
-    label: "ctrl",
-    keyCode: "Control",
+    label: <ChevronUpIcon className="h-4 w-4" />,
+    keyCode: "up",
   },
   {
-    label: "ctrl",
-    keyCode: "Control",
+    label: <ChevronDownIcon className="h-4 w-4" />,
+    keyCode: "down",
   },
   {
-    label: "ctrl",
-    keyCode: "Control",
+    label: <ChevronRightIcon className="h-4 w-4" />,
+    keyCode: "right",
   },
 ];
