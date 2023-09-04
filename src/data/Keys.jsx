@@ -308,15 +308,15 @@ export const keys = [
   },
   {
     label: "win",
-    keyCode: "win",
+    keyCode: "meta",
   },
   {
     label: "alt",
     keyCode: "alt",
   },
   {
-    label: "space",
-    keyCode: "space",
+    label: " ",
+    keyCode: " ",
   },
   {
     label: "alt",
