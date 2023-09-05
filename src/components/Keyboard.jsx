@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { keys } from "../data/Keys";
-
+import { Store } from "../context/Context";
 const Keyboard = () => {
+  const { darkMode } = Store();
   // add 'isPressed' property to all keys
   const [allKeys, setAllKeys] = useState(
     keys.map((key) => ({
@@ -31,7 +32,7 @@ const Keyboard = () => {
       if (index) {
         // updating 'isPressed' prop of a key that matches
         const updatedKeys = [...allKeys];
-        updatedKeys[index].isPressed = true;
+        updatedKeys[index].isPressed = !updatedKeys[index].isPressed;
         setAllKeys(updatedKeys);
       } else {
         console.log("key not found");
@@ -44,10 +45,14 @@ const Keyboard = () => {
 
   //  background-color for active and non active buttons.
   const activeBtn = "bg-red-500";
-  const nonActiveBtn = "bg-white";
+  const nonActiveBtn = darkMode ? "bg-slate-800 text-white" : "bg-white";
 
   return (
-    <section className="w-full  flex flex-col items-center mt-24">
+    <section
+      className={`w - full  flex flex-col items-center mt-24 ${
+        darkMode ? "bg-slate-800 text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="flex items-center gap-1">
         <div className="h-2 w-2 bg-sky-500 rounded-full relative top-1 "></div>
         <h4>Start pressing your keys on your keyboard</h4>
