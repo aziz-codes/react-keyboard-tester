@@ -164,20 +164,32 @@ const Keyboard = () => {
           {/* navigation keys.. */}
 
           <button
-            className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
+            className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10 ${
+              navigationKeys[0].isPressed ? activeBtn : nonActiveBtn
+            }`}
           >
             {navigationKeys[0].label}
           </button>
           <div className="flex flex-col gap-[2px]">
-            <button className="h-5 w-16 shadow-lg border rounded-sm flex justify-center items-center">
+            <button
+              className={`h-5 w-16 shadow-lg border rounded-sm flex justify-center items-center ${
+                navigationKeys[1].isPressed ? activeBtn : nonActiveBtn
+              }`}
+            >
               {navigationKeys[1].label}
             </button>
-            <button className="h-5 w-16 shadow-lg border rounded-sm flex justify-center items-center">
+            <button
+              className={`h-5 w-16 shadow-lg border rounded-sm flex justify-center items-center ${
+                navigationKeys[2].isPressed ? activeBtn : nonActiveBtn
+              }`}
+            >
               {navigationKeys[2].label}
             </button>
           </div>
           <button
-            className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
+            className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10 ${
+              navigationKeys[3].isPressed ? activeBtn : nonActiveBtn
+            }`}
           >
             {navigationKeys[3].label}
           </button>
