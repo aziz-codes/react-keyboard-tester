@@ -326,18 +326,18 @@ export const keys = [
   // navigation keys...
   {
     label: <ChevronLeftIcon className="h-4 w-4" />,
-    keyCode: "left",
+    keyCode: "arrowleft",
   },
   {
     label: <ChevronUpIcon className="h-4 w-4" />,
-    keyCode: "up",
+    keyCode: "arrowup",
   },
   {
     label: <ChevronDownIcon className="h-4 w-4" />,
-    keyCode: "down",
+    keyCode: "arrowdown",
   },
   {
     label: <ChevronRightIcon className="h-4 w-4" />,
-    keyCode: "right",
+    keyCode: "arrowright",
   },
 ];
