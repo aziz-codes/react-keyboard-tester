@@ -162,25 +162,7 @@ const Keyboard = () => {
           ))}
 
           {/* navigation keys.. */}
-          {/* <div className="grid grid-cols-4">
-            {navigationKeys.map((btn, i) =>
-              i === 1 || i === 2 ? (
-                <button
-                  className="h-4 w-12 shadow-lg border rounded-sm flex justify-center items-center"
-                  key={i}
-                >
-                  {btn.label}
-                </button>
-              ) : (
-                <button
-                  className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
-                  key={i}
-                >
-                  {btn.label}
-                </button>
-              )
-            )}
-          </div> */}
+
           <button
             className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
           >
