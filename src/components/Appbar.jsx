@@ -7,7 +7,7 @@ const Appbar = () => {
   };
 
   return (
-    <div className="w-full h-11 flex items-center border border-b justify-end px-4">
+    <div className="w-full h-11 flex items-center  justify-end px-4">
       {darkMode ? (
         <SunIcon
           className="h-5 w-5 cursor-pointer"
