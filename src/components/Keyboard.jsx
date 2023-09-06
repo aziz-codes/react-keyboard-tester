@@ -63,7 +63,6 @@ const Keyboard = () => {
         <div className="flex gap-2 items-center">
           {firstRow.map((btn, index) => (
             <button
-              disabled
               className={`h-6 w-10 border rounded-sm shadow-lg text-xs text-center flex justify-center items-center ${
                 btn.isPressed ? activeBtn : nonActiveBtn
               }`}
@@ -155,7 +154,7 @@ const Keyboard = () => {
               className={`${
                 btn.isPressed ? activeBtn : nonActiveBtn
               } h-10 w-11 rounded-sm flex justify-center shadow-lg items-center border ${
-                index === 4 && "w-[283px]"
+                index === 4 && "w-[315px]"
               }`}
             >
               {btn.label}
@@ -163,7 +162,7 @@ const Keyboard = () => {
           ))}
 
           {/* navigation keys.. */}
-          <div className="grid grid-cols-4">
+          {/* <div className="grid grid-cols-4">
             {navigationKeys.map((btn, i) =>
               i === 1 || i === 2 ? (
                 <button
@@ -181,7 +180,25 @@ const Keyboard = () => {
                 </button>
               )
             )}
+          </div> */}
+          <button
+            className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
+          >
+            {navigationKeys[0].label}
+          </button>
+          <div className="flex flex-col gap-[2px]">
+            <button className="h-5 w-16 shadow-lg border rounded-sm flex justify-center items-center">
+              {navigationKeys[1].label}
+            </button>
+            <button className="h-5 w-16 shadow-lg border rounded-sm flex justify-center items-center">
+              {navigationKeys[2].label}
+            </button>
           </div>
+          <button
+            className={`shadow-lg border rounded-sm flex justify-center items-center w-11 h-10`}
+          >
+            {navigationKeys[3].label}
+          </button>
           {/* end of navigation keys */}
         </div>
         {/* end of last row */}
