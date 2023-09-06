@@ -49,7 +49,7 @@ const Keyboard = () => {
 
   return (
     <section
-      className={`w - full  flex flex-col items-center mt-24 ${
+      className={`w-full  flex flex-col items-center  h-full justify-center ${
         darkMode ? "bg-slate-800 text-white" : "bg-white text-black"
       }`}
     >
@@ -58,11 +58,12 @@ const Keyboard = () => {
         <h4>Start pressing your keys on your keyboard</h4>
       </div>
 
-      <div className="w-full max-w-4xl  h-auto max-h-full border my-2 px-2 flex flex-col items-center justify-center py-2 gap-3">
+      <div className="w-full max-w-4xl  h-auto max-h-full  my-2 px-2 flex flex-col items-center justify-center py-2 gap-3">
         {/* first row */}
         <div className="flex gap-2 items-center">
           {firstRow.map((btn, index) => (
             <button
+              disabled
               className={`h-6 w-10 border rounded-sm shadow-lg text-xs text-center flex justify-center items-center ${
                 btn.isPressed ? activeBtn : nonActiveBtn
               }`}
