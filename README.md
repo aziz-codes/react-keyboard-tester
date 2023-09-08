@@ -1,8 +1,17 @@
-# React + Vite
+# React Keyboard Tester
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple react app that will allows you test your keyboard keys.
 
-Currently, two official plugins are available:
+## How to use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. clone the github repo, use "npm i" to install all the packages.
+2. use "npm run dev" command to run the app, you can visit "localhost:5173
+
+## Folder Structure
+
+1. Inside src/data/ a Keys.jsx file contains all the keys.
+2. Inside components Keyboard.jsx is the main component which is rendering all the keys and functionality.
+3. src/layouts/ KeyboardLayout.jsx is used for lazy loading i.e skeleton loader.
+4. src/context/ is used for global store that has a single darkMode variable for toggling theme.
+
+<!-- happy coding... -->
