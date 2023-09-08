@@ -14,4 +14,4 @@ A simple react app that will allows you test your keyboard keys.
 3. src/layouts/ KeyboardLayout.jsx is used for lazy loading i.e skeleton loader.
 4. src/context/ is used for global store that has a single darkMode variable for toggling theme.
 
-<!-- happy coding... -->
+#### happy coding
