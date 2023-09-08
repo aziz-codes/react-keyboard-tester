@@ -55,7 +55,7 @@ const Keyboard = () => {
     >
       <div className="flex items-center gap-1">
         <div className="h-2 w-2 bg-sky-500 rounded-full relative top-1 "></div>
-        <h4>Start pressing your keys on your keyboard</h4>
+        <h4>Start pressing keys on your keyboard</h4>
       </div>
 
       <div className="w-full max-w-4xl  h-auto max-h-full  my-2 px-2 flex flex-col items-center justify-center py-2 gap-3">
