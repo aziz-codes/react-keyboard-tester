@@ -64,7 +64,7 @@ export const keys = [
     keyCode: "",
   },
   {
-    label: <PhoneIcon className="h-4 w-4 rotate-6" />,
+    label: <PhoneIcon className="h-4 w-4 rotate-[135deg]" />,
     keyCode: "",
   },
   {
