@@ -12,6 +12,7 @@ const Keyboard = () => {
     }))
   );
 
+  //saving keys in new variable to render them in specific row
   const firstRow = allKeys.slice(0, 16);
   const secondRow = allKeys.slice(16, 30);
   const thirdRow = allKeys.slice(30, 44);
